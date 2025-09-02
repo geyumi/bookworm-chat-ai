@@ -102,14 +102,23 @@ const ChatInterface = () => {
   };
 
   return (
-    <div className="flex flex-col h-full max-w-4xl mx-auto">
+    <div className="flex flex-col h-full max-w-5xl mx-auto relative">
       {/* Chat Messages Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-6 space-y-6 relative">
+        {/* Background Effects */}
+        <div className="absolute inset-0 opacity-30 bg-grid-pattern pointer-events-none"></div>
+        
         {messages.length === 0 && (
-          <div className="text-center py-12 animate-fade-in-up">
-            <Book className="w-16 h-16 mx-auto mb-4 text-primary/60" />
-            <p className="text-muted-foreground text-lg">
-              Tell me what you're in the mood to read, and I'll find your perfect next book!
+          <div className="relative text-center py-16 animate-fade-in-up">
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl"></div>
+              <Book className="relative w-20 h-20 mx-auto mb-6 text-primary glow-primary" />
+            </div>
+            <h2 className="text-2xl font-bold gradient-text mb-4">
+              Ready to discover your next favorite book?
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-md mx-auto leading-relaxed">
+              Tell me what you're in the mood to read, and I'll find the perfect recommendations just for you!
             </p>
           </div>
         )}
@@ -122,25 +131,38 @@ const ChatInterface = () => {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input Area */}
-      <div className="p-4 border-t bg-background/80 backdrop-blur-sm">
-        <div className="flex gap-3">
-          <Input
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder="E.g., 'I'm looking for a thrilling sci-fi adventure set in space...'"
-            className="flex-1"
-            disabled={isLoading}
-          />
+      {/* Enhanced Input Area */}
+      <div className="p-6 border-t border-border/50 glass-effect relative">
+        <div className="flex gap-4 relative">
+          <div className="flex-1 relative">
+            <Input
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyPress={handleKeyPress}
+              placeholder="E.g., 'I'm looking for a thrilling sci-fi adventure set in space...'"
+              className="pr-12 h-12 bg-input/50 border-border/50 focus:border-primary focus:shadow-input transition-all duration-300 text-base backdrop-blur-sm"
+              disabled={isLoading}
+            />
+            {/* Input Glow Effect */}
+            <div className="absolute inset-0 rounded-md bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          </div>
           <Button 
             onClick={handleSendMessage}
             disabled={!inputValue.trim() || isLoading}
             variant="literary"
             size="icon"
+            className="h-12 w-12 shrink-0"
           >
-            <Send className="w-4 h-4" />
+            <Send className="w-5 h-5" />
           </Button>
+        </div>
+        
+        {/* Status Indicator */}
+        <div className="flex items-center justify-center mt-3 text-xs text-muted-foreground">
+          <div className="flex items-center gap-1">
+            <div className="w-1 h-1 bg-accent rounded-full animate-pulse"></div>
+            <span>Powered by AI • Instant recommendations</span>
+          </div>
         </div>
       </div>
     </div>

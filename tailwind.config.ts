@@ -29,21 +29,31 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					muted: 'hsl(var(--primary-muted))'
+					muted: 'hsl(var(--primary-muted))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				
-				/* Secondary - Reading Green */
+				/* Secondary - Mystical Purple */
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))',
-					light: 'hsl(var(--secondary-light))'
+					light: 'hsl(var(--secondary-light))',
+					glow: 'hsl(var(--secondary-glow))'
 				},
 				
-				/* Accent - Golden Highlight */
+				/* Accent - Golden Cyber */
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))',
-					muted: 'hsl(var(--accent-muted))'
+					muted: 'hsl(var(--accent-muted))',
+					glow: 'hsl(var(--accent-glow))'
+				},
+				
+				/* Tertiary - Emerald Tech */
+				tertiary: {
+					DEFAULT: 'hsl(var(--tertiary))',
+					foreground: 'hsl(var(--tertiary-foreground))',
+					glow: 'hsl(var(--tertiary-glow))'
 				},
 				
 				/* Status Colors */
@@ -73,12 +83,15 @@ export default {
 				/* Chat Interface Colors */
 				'user-bubble': 'hsl(var(--user-bubble))',
 				'user-bubble-foreground': 'hsl(var(--user-bubble-foreground))',
+				'user-bubble-glow': 'hsl(var(--user-bubble-glow))',
 				'bot-bubble': 'hsl(var(--bot-bubble))',
 				'bot-bubble-foreground': 'hsl(var(--bot-bubble-foreground))',
+				'bot-bubble-border': 'hsl(var(--bot-bubble-border))',
 				
 				/* Book Card Elements */
 				'book-card': 'hsl(var(--book-card))',
 				'book-card-border': 'hsl(var(--book-card-border))',
+				'book-card-hover': 'hsl(var(--book-card-hover))',
 				'book-category': 'hsl(var(--book-category))',
 				'book-category-foreground': 'hsl(var(--book-category-foreground))',
 				
@@ -185,9 +198,19 @@ export default {
 			
 			/* Enhanced Design System */
 			boxShadow: {
-				'chat': '0 4px 12px hsl(var(--primary) / 0.1)',
-				'book-card': '0 2px 8px hsl(var(--primary) / 0.08)',
-				'message': '0 2px 6px hsl(var(--primary) / 0.06)'
+				'chat': '0 8px 32px hsl(var(--primary) / 0.15)',
+				'book-card': '0 4px 16px hsl(var(--primary) / 0.1)',
+				'message': '0 2px 12px hsl(var(--primary) / 0.08)',
+				'glow': '0 0 32px hsl(var(--primary-glow) / 0.3)',
+				'accent-glow': '0 0 24px hsl(var(--accent-glow) / 0.2)',
+				'input': '0 0 0 1px hsl(var(--input-focus) / 0.3), 0 0 16px hsl(var(--primary) / 0.1)'
+			},
+			
+			/* Background Patterns */
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+				'grid-pattern': 'linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px), linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px)',
 			}
 		}
 	},

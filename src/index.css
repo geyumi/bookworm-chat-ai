@@ -8,85 +8,106 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Background & Surface Colors */
-    --background: 46 20% 97%;
-    --foreground: 215 25% 15%;
+    /* Dark Literary Theme - Rich & Sophisticated */
+    --background: 220 15% 8%;
+    --foreground: 210 40% 95%;
     
     /* Card & Surface Elements */
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card: 220 15% 12%;
+    --card-foreground: 210 40% 95%;
     
     /* Popover Elements */
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 210 40% 95%;
     
-    /* Primary - Deep Literary Blue */
-    --primary: 215 85% 25%;
-    --primary-foreground: 46 20% 97%;
-    --primary-muted: 215 60% 35%;
+    /* Primary - Electric Literary Blue with Glow */
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 15% 8%;
+    --primary-muted: 217 70% 45%;
+    --primary-glow: 217 91% 70%;
     
-    /* Secondary - Warm Reading Green */
-    --secondary: 150 40% 55%;
-    --secondary-foreground: 150 90% 8%;
-    --secondary-light: 150 35% 88%;
+    /* Secondary - Mystical Purple */
+    --secondary: 270 85% 65%;
+    --secondary-foreground: 270 95% 8%;
+    --secondary-light: 270 40% 25%;
+    --secondary-glow: 270 85% 75%;
     
-    /* Accent - Golden Literary Highlight */
-    --accent: 45 85% 65%;
+    /* Accent - Golden Cyber Highlight */
+    --accent: 45 100% 70%;
     --accent-foreground: 45 95% 8%;
-    --accent-muted: 45 70% 85%;
+    --accent-muted: 45 80% 85%;
+    --accent-glow: 45 100% 80%;
+    
+    /* Tertiary - Emerald Tech */
+    --tertiary: 150 85% 55%;
+    --tertiary-foreground: 150 95% 8%;
+    --tertiary-glow: 150 85% 65%;
     
     /* Muted & Subtle Elements */
-    --muted: 215 20% 92%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 15% 65%;
     
-    /* User Message Bubble */
-    --user-bubble: 215 85% 25%;
-    --user-bubble-foreground: 46 20% 97%;
+    /* User Message Bubble - Glowing Blue */
+    --user-bubble: 217 91% 60%;
+    --user-bubble-foreground: 220 15% 8%;
+    --user-bubble-glow: 217 91% 70%;
     
-    /* Bot Message Bubble */
-    --bot-bubble: 215 20% 92%;
-    --bot-bubble-foreground: 215 25% 15%;
+    /* Bot Message Bubble - Dark with Purple Accent */
+    --bot-bubble: 220 15% 15%;
+    --bot-bubble-foreground: 210 40% 90%;
+    --bot-bubble-border: 270 50% 30%;
     
     /* Book Card Elements */
-    --book-card: 0 0% 100%;
-    --book-card-border: 215 25% 85%;
-    --book-category: 150 40% 55%;
-    --book-category-foreground: 0 0% 100%;
+    --book-card: 220 15% 14%;
+    --book-card-border: 270 30% 25%;
+    --book-card-hover: 220 15% 16%;
+    --book-category: 150 85% 55%;
+    --book-category-foreground: 150 95% 8%;
     
     /* Interactive States */
-    --hover-overlay: 215 85% 25% / 0.05;
-    --active-overlay: 215 85% 25% / 0.1;
+    --hover-overlay: 217 91% 60% / 0.1;
+    --active-overlay: 217 91% 60% / 0.2;
     
     /* Status Colors */
-    --destructive: 0 75% 55%;
+    --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
-    --success: 150 65% 45%;
-    --success-foreground: 0 0% 100%;
+    --success: 150 85% 55%;
+    --success-foreground: 150 95% 8%;
     
     /* Form Elements */
-    --border: 215 25% 85%;
-    --input: 215 25% 85%;
-    --input-focus: 215 85% 25%;
-    --ring: 215 85% 25%;
+    --border: 220 15% 25%;
+    --input: 220 15% 18%;
+    --input-focus: 217 91% 60%;
+    --ring: 217 91% 60%;
     
     /* Design System Values */
-    --radius: 0.75rem;
-    --radius-sm: 0.5rem;
-    --radius-lg: 1rem;
+    --radius: 1rem;
+    --radius-sm: 0.75rem;
+    --radius-lg: 1.5rem;
     
-    /* Shadows */
-    --shadow-sm: 0 2px 4px hsl(215 25% 15% / 0.05);
-    --shadow-md: 0 4px 12px hsl(215 25% 15% / 0.1);
-    --shadow-lg: 0 8px 24px hsl(215 25% 15% / 0.15);
+    /* Enhanced Shadows with Glow */
+    --shadow-sm: 0 2px 8px hsl(220 15% 5% / 0.3);
+    --shadow-md: 0 8px 24px hsl(220 15% 5% / 0.4);
+    --shadow-lg: 0 16px 48px hsl(220 15% 5% / 0.5);
+    --shadow-glow: 0 0 32px hsl(var(--primary-glow) / 0.3);
+    --shadow-accent-glow: 0 0 24px hsl(var(--accent-glow) / 0.2);
     
-    /* Gradients */
+    /* Rich Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-muted)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-muted)));
     --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    
+    /* Animated Gradients */
+    --gradient-animated: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)), hsl(var(--tertiary)));
+    --gradient-text: linear-gradient(135deg, hsl(var(--primary-glow)), hsl(var(--accent-glow)));
     
     /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-quick: all 0.15s ease-out;
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.2s ease-out;
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -106,41 +127,7 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Enhanced Dark Mode - Already Applied Above */
   }
 }
 
@@ -151,5 +138,48 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(var(--primary) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--secondary) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(var(--accent) / 0.03) 0%, transparent 50%);
+  }
+  
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+  
+  /* Custom Utility Classes */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--shadow-accent-glow);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(20px);
+    background: hsl(var(--card) / 0.8);
+    border: 1px solid hsl(var(--border) / 0.5);
   }
 }

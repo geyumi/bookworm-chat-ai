@@ -18,7 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        literary: "bg-gradient-to-r from-primary to-primary-muted text-primary-foreground hover:shadow-lg hover:scale-105 transition-all duration-200 shadow-chat",
+        literary: "bg-gradient-to-r from-primary to-primary-muted text-primary-foreground hover:shadow-glow hover:scale-105 transition-all duration-300 shadow-chat border border-primary/20",
+        cosmic: "bg-gradient-to-r from-secondary to-accent text-secondary-foreground hover:shadow-accent-glow hover:scale-105 transition-all duration-300",
+        cyber: "bg-gradient-to-r from-tertiary to-primary text-tertiary-foreground hover:shadow-glow hover:scale-105 transition-all duration-300 border border-tertiary/20",
       },
       size: {
         default: "h-10 px-4 py-2",
