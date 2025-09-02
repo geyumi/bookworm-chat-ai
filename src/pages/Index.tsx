@@ -1,12 +1,17 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import AppHeader from '@/components/AppHeader';
+import ChatInterface from '@/components/ChatInterface';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-surface flex flex-col">
+      <AppHeader />
+      
+      <main className="flex-1 container mx-auto px-4 pb-4">
+        <div className="bg-card rounded-2xl shadow-chat border border-border h-full max-h-[calc(100vh-200px)]">
+          <ChatInterface />
+        </div>
+      </main>
     </div>
   );
 };

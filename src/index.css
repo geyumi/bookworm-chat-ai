@@ -2,41 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* BookWorm AI Design System - Literary & Cozy Reading Theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Background & Surface Colors */
+    --background: 46 20% 97%;
+    --foreground: 215 25% 15%;
+    
+    /* Card & Surface Elements */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 215 25% 15%;
+    
+    /* Popover Elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 215 25% 15%;
+    
+    /* Primary - Deep Literary Blue */
+    --primary: 215 85% 25%;
+    --primary-foreground: 46 20% 97%;
+    --primary-muted: 215 60% 35%;
+    
+    /* Secondary - Warm Reading Green */
+    --secondary: 150 40% 55%;
+    --secondary-foreground: 150 90% 8%;
+    --secondary-light: 150 35% 88%;
+    
+    /* Accent - Golden Literary Highlight */
+    --accent: 45 85% 65%;
+    --accent-foreground: 45 95% 8%;
+    --accent-muted: 45 70% 85%;
+    
+    /* Muted & Subtle Elements */
+    --muted: 215 20% 92%;
+    --muted-foreground: 215 15% 45%;
+    
+    /* User Message Bubble */
+    --user-bubble: 215 85% 25%;
+    --user-bubble-foreground: 46 20% 97%;
+    
+    /* Bot Message Bubble */
+    --bot-bubble: 215 20% 92%;
+    --bot-bubble-foreground: 215 25% 15%;
+    
+    /* Book Card Elements */
+    --book-card: 0 0% 100%;
+    --book-card-border: 215 25% 85%;
+    --book-category: 150 40% 55%;
+    --book-category-foreground: 0 0% 100%;
+    
+    /* Interactive States */
+    --hover-overlay: 215 85% 25% / 0.05;
+    --active-overlay: 215 85% 25% / 0.1;
+    
+    /* Status Colors */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 150 65% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Form Elements */
+    --border: 215 25% 85%;
+    --input: 215 25% 85%;
+    --input-focus: 215 85% 25%;
+    --ring: 215 85% 25%;
+    
+    /* Design System Values */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px hsl(215 25% 15% / 0.05);
+    --shadow-md: 0 4px 12px hsl(215 25% 15% / 0.1);
+    --shadow-lg: 0 8px 24px hsl(215 25% 15% / 0.15);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-muted)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-muted)));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.15s ease-out;
 
     --sidebar-background: 0 0% 98%;
 
