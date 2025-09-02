@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Send, Book } from 'lucide-react';
 import MessageBubble from './MessageBubble';
 import TypingIndicator from './TypingIndicator';
@@ -105,34 +104,32 @@ const ChatInterface = () => {
   return (
     <div className="flex flex-col h-full max-w-5xl mx-auto relative">
       {/* Chat Messages Area */}
-      <ScrollArea className="flex-1 relative">
-        <div className="p-6 space-y-6 min-h-full">
-          {/* Background Effects */}
-          <div className="absolute inset-0 opacity-30 bg-grid-pattern pointer-events-none"></div>
-          
-          {messages.length === 0 && (
-            <div className="relative text-center py-16 animate-fade-in-up">
-              <div className="relative inline-block">
-                <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl"></div>
-                <Book className="relative w-20 h-20 mx-auto mb-6 text-primary glow-primary" />
-              </div>
-              <h2 className="text-2xl font-bold gradient-text mb-4">
-                Ready to discover your next favorite book?
-              </h2>
-              <p className="text-muted-foreground text-lg max-w-md mx-auto leading-relaxed">
-                Tell me what you're in the mood to read, and I'll find the perfect recommendations just for you!
-              </p>
+      <div className="flex-1 overflow-y-auto p-6 space-y-6 relative">
+        {/* Background Effects */}
+        <div className="absolute inset-0 opacity-30 bg-grid-pattern pointer-events-none"></div>
+        
+        {messages.length === 0 && (
+          <div className="relative text-center py-16 animate-fade-in-up">
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl"></div>
+              <Book className="relative w-20 h-20 mx-auto mb-6 text-primary glow-primary" />
             </div>
-          )}
-          
-          {messages.map((message) => (
-            <MessageBubble key={message.id} message={message} />
-          ))}
-          
-          {isLoading && <TypingIndicator />}
-          <div ref={messagesEndRef} />
-        </div>
-      </ScrollArea>
+            <h2 className="text-2xl font-bold gradient-text mb-4">
+              Ready to discover your next favorite book?
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-md mx-auto leading-relaxed">
+              Tell me what you're in the mood to read, and I'll find the perfect recommendations just for you!
+            </p>
+          </div>
+        )}
+        
+        {messages.map((message) => (
+          <MessageBubble key={message.id} message={message} />
+        ))}
+        
+        {isLoading && <TypingIndicator />}
+        <div ref={messagesEndRef} />
+      </div>
 
       {/* Enhanced Input Area */}
       <div className="p-6 border-t border-border/50 glass-effect relative">
